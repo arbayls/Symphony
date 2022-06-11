@@ -1,2 +1,2 @@
-# concertMVP
-MVP for Concert web application
+# symphonyMVP
+MVP for Symphony web application

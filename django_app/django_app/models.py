@@ -3,7 +3,7 @@ from django.db import models
 
 class User(models.Model):
     preferred_name = models.CharField(max_length=30)
-    user_name = models.Charfield(max_length=30)
+    user_name = models.CharField(max_length=30)
     pronouns = (
         ('She', 'She/Her/Hers'),
         ('They', 'They/Them/Theirs'),

@@ -8,7 +8,7 @@ class User(models.Model):
         ('She', 'She/Her/Hers'),
         ('They', 'They/Them/Theirs'),
         ('He', 'He/Him/His'),
-        (preferred_name, 'No gender pronouns, please.')
+        (preferred_name, 'I don\'t use gender pronouns.')
     )
     pronouns = models.CharField(max_length=30, choices=pronouns)
 

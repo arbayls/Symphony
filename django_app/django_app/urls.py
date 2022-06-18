@@ -21,4 +21,5 @@ from django_app import user_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/users$', user_views.user_list),
+    path('api/users/<int:pk>', user_views.user, name='show_one'),
 ]

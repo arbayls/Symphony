@@ -7,6 +7,8 @@ from rest_framework import status
 from django_app.models import User
 from django_app.serializers import UserSerializer
 from rest_framework.decorators import api_view
+from django.core.signals import request_finished
+
 
 
 def index(request):

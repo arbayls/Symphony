@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class PromptSerializer(serializers.ModelSerializer):
-    class Prompt:
+    class Meta:
         model = Prompt
         fields = ('title',
                   'life_sphere',

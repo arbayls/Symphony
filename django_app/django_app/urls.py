@@ -17,9 +17,12 @@ from django.urls import include, re_path
 from django.contrib import admin
 from django.urls import path
 from django_app import user_views
+from django_app import prompt_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    re_path(r'^api/users$', user_views.user_list),
-    path('api/users/<int:pk>', user_views.user, name='show_one'),
+        path('admin/', admin.site.urls),
+        re_path(r'^api/users$', user_views.user_list),
+        re_path(r'^api/prompts$', prompt_views.prompt_list),
+        path('api/users/<int:pk>', user_views.user, name='show_one'),
+        path('api/prompts/<int:pk>', prompt_views.prompt, name='show_one'),
 ]

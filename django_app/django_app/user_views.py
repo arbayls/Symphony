@@ -47,7 +47,6 @@ def user_list(request):
                                 status=status.HTTP_204_NO_CONTENT)
 
 
-
 # one
 @api_view(['GET', 'DELETE'])
 def user(request, pk):

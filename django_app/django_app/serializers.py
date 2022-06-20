@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django_app.models import User
 from django_app.models import Prompt
+from django_app.models import Answer
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -17,3 +18,11 @@ class PromptSerializer(serializers.ModelSerializer):
         fields = ('title',
                   'life_sphere',
                   'prompt_text',)
+
+
+class AnswerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Answer
+        fields = ('title',
+                  'life_sphere',
+                  'user_answer',)

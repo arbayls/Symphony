@@ -18,11 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from django_app import user_views
 from django_app import prompt_views
+from django_app import answer_views
 
 urlpatterns = [
         path('admin/', admin.site.urls),
         re_path(r'^api/users$', user_views.user_list),
         re_path(r'^api/prompts$', prompt_views.prompt_list),
+        re_path(r'^api/answers$', answer_views.answer_list),
         path('api/users/<int:pk>', user_views.user, name='show_one'),
         path('api/prompts/<int:pk>', prompt_views.prompt, name='show_one'),
+        path('api/answers/<int:pk>', answer_views.prompt, name='show_one'),
 ]

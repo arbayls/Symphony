@@ -17,7 +17,7 @@ import {
     Text,
     useColorScheme,
     View,
-    Image,
+    Image, Dimensions,
 } from 'react-native';
 
 import {
@@ -37,38 +37,32 @@ const Home: () => Node = () => {
     };
 
     return (
-        <SafeAreaView style={backgroundStyle}>
-            <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-            <ScrollView
-                contentInsetAdjustmentBehavior="automatic"
-                style={backgroundStyle}>
-                <ImageBackground source={ require('../static/backgroundImg.jpeg')} style={styles.image} >
-                <View>
-                    <Text style={styles.sectionTitle}>
-                        Attune
-                    </Text>
-                </View>
-                </ImageBackground>
-            </ScrollView>
-        </SafeAreaView>
+        <View style={{flex:1}}>
+            <ImageBackground source={ require('../static/backgroundImg.jpeg')} style={styles.image} >
+                <Text style={styles.sectionTitle}>
+                    Attune
+                </Text>
+            </ImageBackground>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
 
+
     MainContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        width: null,
-        height: null,
-        flexDirection: 'column',
     },
+
     image: {
         backgroundRepeat: 'noRepeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
         sectionContainer: {
             marginTop: 32,

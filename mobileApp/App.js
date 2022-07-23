@@ -28,7 +28,6 @@ import {
 
 import Home from './pages/Home.js'
 
-
 // const Section = ({children, title}): Node => {
 //   const isDarkMode = useColorScheme() === 'dark';
 //   return (
@@ -63,19 +62,14 @@ const App: () => Node = () => {
   };
 
   return (
-    <SafeAreaView>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic">
-      </ScrollView>
-      <View>
+      <View style={{flex:1}}>
         <Home></Home>
       </View>
-    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,

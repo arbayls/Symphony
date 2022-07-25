@@ -17,7 +17,8 @@ import {
     Text,
     useColorScheme,
     View,
-    Image, Dimensions,
+    Pressable,
+    Image, Dimensions, Button,
 } from 'react-native';
 
 import {
@@ -28,6 +29,7 @@ import {
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {collectCoverage} from "simctl/jest.config";
+import LoginButton from "./Button";
 
 const Home: () => Node = () => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -42,6 +44,7 @@ const Home: () => Node = () => {
                 <Text style={styles.sectionTitle}>
                     Attune
                 </Text>
+                <LoginButton></LoginButton>
             </ImageBackground>
         </View>
     );
@@ -55,31 +58,24 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-
     image: {
         backgroundRepeat: 'noRepeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        flex: 2,
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-        sectionContainer: {
-            marginTop: 32,
-            paddingHorizontal: 24,
-        },
-        sectionTitle: {
-            fontSize: 24,
-            fontWeight: '600',
-        },
-        sectionDescription: {
-            marginTop: 8,
-            fontSize: 18,
-            fontWeight: '400',
-        },
-        highlight: {
-            fontWeight: '700',
-        }
+    sectionContainer: {
+        marginTop: 32,
+        paddingHorizontal: 24,
+    },
+    sectionTitle: {
+        fontSize: 80,
+        fontWeight: '600',
+        paddingBottom: 60,
+        fontColor: 'charcoal',
+    }
     ,});
 
 export default Home;

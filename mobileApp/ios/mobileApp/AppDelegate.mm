@@ -6,6 +6,8 @@
 
 #import <React/RCTAppSetupUtils.h>
 
+#import <React/RCTLinkingManager.h>
+
 #if RCT_NEW_ARCH_ENABLED
 #import <React/CoreModulesPlugins.h>
 #import <React/RCTCxxBridgeDelegate.h>
@@ -28,6 +30,13 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 #endif
 
 @implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [RCTLinkingManager application:application openURL:url
+                        sourceApplication:sourceApplication annotation:annotation];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
